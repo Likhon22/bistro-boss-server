@@ -90,7 +90,7 @@ async function run() {
       res.send(result);
     });
     //get menu
-    app.get("/menu", verifyToken, async (req, res) => {
+    app.get("/menu", async (req, res) => {
       const category = req.query.category;
       const currentPage = Number(req.query.currentPage);
       const limit = Number(req.query.limit);
